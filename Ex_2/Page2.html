@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+
+<body>
+        <form>
+            <h1>Submit your Resume</h1>
+            <div id="personal">
+                <fieldset style="width:700px;">
+                    <legend>Personal Details</legend>
+                    *First Name:
+                    <input type="text" name="firstname" placeholder="Enter your first name" required><br><br>
+                    *Middle Name:
+                    <input type="text" name="middlename" placeholder="Enter your middle name" required><br><br>
+                    *Last Name:
+                    <input type="text" name="lastname" placeholder="Enter your last name" required><br><br>
+
+                    Date of Birth:
+                    <input type="date" name="dataofbirt" required> <br><br>
+                    Age in years:
+                    <input type="number" name="Age" required style="width:50px;"><br><br>
+                    Gender
+                    <input type="radio" name="male">Male<input type="radio" name="Female">Female
+                </fieldset>
+                <input id="20percent" type="range" min="0" max="100" value="20">
+                <label for="20percent">20% of 100%</label>
+            </div>
+            <div id="address">
+                <fieldset style="width:700px">
+                    <legend>Address Details</legend>
+                    Address:
+                    <input type="text" name="address" style="height:70px; width:300px">
+                    <br><br>
+                    City/Town:
+                    <input type="text" name="city">
+                    <br><br>
+                    State:
+                    <input type="text" name="state">
+                    <br><br>
+                    Zip Code:
+                    <input type="text" name="zipcode" pattern="[0-9]" max="6">
+                    <br><br>
+
+                </fieldset>
+                <input id="40percent" type="range" min="0" max="100" value="40">
+                <label for="40percent">40% of 100%</label>
+            </div>
+            <div>
+                <fieldset style="width:700px;">
+                    <legend>Contact Information</legend>
+                    Telephone:
+                    <input type="tel" name="telephone" placeholder="(044)9999999">
+                    <br><br>
+                    *Mobile
+                    <input type="tel" name="mobile" placeholder="(+91)99999 99999">
+                    <br><br>
+                    *Email
+                    <input type="email" name="email" placeholder="valid email">
+                    <br><br>
+                    Website
+                    <input type="url" name="website" placeholder="valid url">
+
+                </fieldset>
+                <input id="60percent" type="range" min="0" max="100" value="60">
+                <label for="60percent">60% of 100%</label>
+
+            </div>
+            <div>
+                <fieldset style="width:400px">
+                    <legend> Education Details</legend>
+                        <table border="1" cellspacing='0' cellpadding="6">
+                            <tr>
+                                    <th>Qualifications</th>
+
+
+                                <th>
+                                    Board/University
+                               
+                                </th>
+                                <th>
+                                    Country
+                                
+                                </th>
+                                <th>
+                                    Starting Year
+                                
+                                </th>
+                                <th>
+                                    Ending Year
+                                    
+
+                                
+                                </th>
+                                <th>
+                                    Percentage
+                               
+                                </th>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" value="10">10th</td>
+                                <td><input type="text" placeholder="Board/University"></td>
+                                <td><select name="country" id="country">
+                                    <option value="Choose">Choose</option>
+                                    <option value="India">India</option>
+                                    <option value="UAE">UAE</option>
+                                    <option value="USA">USA</option>
+                                    <option value="China">China</option>
+                                </select></td>    
+                                <td><input type="date"></td>
+                                <td><input type="date"></td>
+                                <td><input  style="width:70px" type="number"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" value="12">12th</td>
+                                <td><input type="text" placeholder="Board/University"></td>
+                                <td><select name="country" id="country">
+                                    <option value="Choose">Choose</option>
+                                    <option value="India">India</option>
+                                    <option value="UAE">UAE</option>
+                                    <option value="USA">USA</option>
+                                    <option value="China">China</option>
+                                </select></td>    
+                                <td><input type="date"></td>
+                                <td><input type="date"></td>
+                                <td><input  style="width:70px" type="number"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" value="B.Tech">B.Tech</td>
+                                <td><input type="text" placeholder="Board/University"></td>
+                                <td><select name="country" id="country">
+                                    <option value="Choose">Choose</option>
+                                    <option value="India">India</option>
+                                    <option value="UAE">UAE</option>
+                                    <option value="USA">USA</option>
+                                    <option value="China">China</option>
+                                </select></td>    
+                                <td><input type="date"></td>
+                                <td><input type="date"></td>
+                                <td><input  style="width:70px" type="number"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" value="M.Tech">M.Tech</td>
+                                <td><input type="text" placeholder="Board/University"></td>
+                                <td><select name="country" id="country">
+                                    <option value="Choose">Choose</option>
+                                    <option value="India">India</option>
+                                    <option value="UAE">UAE</option>
+                                    <option value="USA">USA</option>
+                                    <option value="China">China</option>
+                                </select></td>    
+                                <td><input type="date"></td>
+                                <td><input type="date"></td>
+                                <td><input  style="width:70px" type="number"></td>
+                            </tr>
+                    </table>
+                </fieldset>
+                
+                <input id="80percent" type="range" min="0" max="100" value="80">
+                <label for="80percent">80% of 100%</label>
+
+            </div>
+            <div>
+                <fieldset style="width: 700px;">
+                    Attach your resume in .doc or .pdf format <input type="file" value="resume">
+                    <br><input type="checkbox"> I filled all the details
+                </fieldset>
+                <input id="100percent" type="range" min="0" max="100" value="100">
+                <label for="100percent">100% of 100%</label>
+            </div>
+            <div align="center">
+                <button >Submit</button>
+            </div>    
+        </form>
+</body>
+
+</html>
