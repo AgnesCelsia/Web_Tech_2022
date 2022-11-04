@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registeration Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app = angular.module('myapp', [])
+        app.controller('mycontrol', function ($scope) {
+
+        })
+    </script>
+</head>
+
+<body ng-app="myapp" ng-controller="mycontrol">
+    <form name="myform" method="POST">
+        <h1>User Registeration Form</h1>
+        Name:<span style="color: red;">*</span><input style="margin-left: 100px;" type="text" name="name"
+            ng-model="myName" required>
+        <span style="color: red;" ng-show="myform.name.$dirty && myform.name.$error.required">This field is
+            required.</span>
+        <span style="color: green" ng-show="myform.name.$dirty && myform.name.$valid">✓</span><br><br>
+        Password:<span style="color:red ;">*</span> &nbsp;&nbsp;&nbsp;<input style="margin-left: 60px;" type="password"
+            name="password" ng-model="myPass" required>
+        <span style="color: red;" ng-show="myform.password.$dirty && myform.password.$error.required">This field is
+            required.</span>
+        <span style="color: green" ng-show="myform.password.$dirty && myform.password.$valid">✓</span><br><br>
+        Age<span style="color:red">*</span>&nbsp;&nbsp;&nbsp; <input style="margin-left: 105px;" type="text" name="age"
+            ng-model="myAge" required>
+        <span style="color: red;" ng-show="myform.age.$dirty && myform.age.$error.required">Invalid Email id
+            format</span>
+        <span style="color: green" ng-show="myform.age.$dirty && myform.age.$valid">✓</span><br><br>
+        Mobile Number:<span style="color: red;">*</span>&nbsp;&nbsp;&nbsp;<input style="margin-left: 21px;" type="text"
+            name="number" ng-model="myMobile" required>
+        <span style="color: red;" ng-show="myform.number.$dirty && myform.number.$error.required">This field is
+            required.</span>
+        <span style="color: green" ng-show="myform.number.$dirty && myform.number.$valid">✓</span><br><br>
+        Email:<span style="color: red;">*</span>&nbsp;&nbsp;&nbsp;<input style="margin-left: 95px;" type="email"
+            name="mail" ng-model="myMail" required>
+        <span style="color: red;" ng-show="myform.mail.$dirty && myform.mail.$error.email">Invalid email format.</span>
+        <span style="color: green" ng-show="myform.mail.$dirty && myform.mail.$valid">✓</span><br><br>
+        Gender:<span style="color: red;">*</span>&nbsp;&nbsp;&nbsp;<input style="margin-left: 100px;" type="radio"
+            name="gender" ng-model="myGen">Male&nbsp;&nbsp;<input type="radio" name="gender" ng-model="myGen">Female
+        <span style="color: red;" ng-show="myform.gender.$dirty && myform.gender.$error.required">This field is
+            required.</span>
+        <span style="color: green" ng-show="myform.gender.$dirty && myform.gender.$valid">✓</span><br><br>
+        State: <span style="color:red">*</span>&nbsp;&nbsp;&nbsp;<select style="margin-left: 95px;" name="state"
+            ng-model="myState">
+            <option value="TamilNadu">TamilNadu</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Andhra">Andhra</option>
+            <option value="Karnataka">Karnataka</option>
+        </select>
+        <span style="color: red;" ng-show="myform.select.$dirty && myform.select.$error.required">This field is
+            required.</span>
+        <span style="color: green" ng-show="myform.select.$dirty && myform.select.$valid">✓</span><br><br>
+
+        <button ng-disabled="myform.$invalid" style="margin-left:100px">Submit</button>
+
+    </form>
+
+</body>
+
+</html>
