@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Play 2022|Registeration Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app = angular.module('myapp', [])
+        app.controller('mycontrol', function ($scope) {
+
+        })
+    </script>
+</head>
+
+<body ng-app="myapp" ng-controller="mycontrol">
+    <form name="myform" method="POST">
+        <h1 style="text-align: center">Mega Play 2022 Registeration Form</h1>
+        Register Number:<span style="color: red;">*</span> <br><br><input type="text" name="myReg" ng-model="regno"
+            required>
+        <span style="color: red;" ng-show="myform.myReg.$dirty && myform.myReg.$error.required">This field is
+            required.</span>
+        <span style="color: green" ng-show="myform.myReg.$dirty && myform.myReg.$valid">✓</span><br><br>
+        Name:<span style="color:red ;">*</span><br><br> <input type="text" name="myName" ng-model="name" required>
+        <span style="color: red;" ng-show="myform.myName.$dirty && myform.myName.$error.required">This field is
+            required.</span>
+        <span style="color: green" ng-show="myform.myName.$dirty && myform.myName.$valid">✓</span><br><br>
+        KMail:<span style="color:red">*</span> <br> <br><input type="email" name="myMail" ng-model="mail" required>
+        <span style="color: red;" ng-show="myform.myMail.$dirty && myform.myMail.$error.email">Invalid Email id
+            format</span>
+        <span style="color: green" ng-show="myform.myMail.$dirty && myform.myMail.$valid">✓</span><br><br>
+        Interested in: <span style="color:red">*</span><br> <br><select name="select" ng-model="myAct">
+            <option value="Singing">Singing</option>
+            <option value="Dance">Dance</option>
+            <option value="Backdrop">Backdrop</option>
+            <option value="Acting">Acting</option>
+            <option value="Volunteer">Volunteer</option>
+            <option value="MC">MC</option>
+        </select>
+        <span style="color: red;" ng-show="myform.select.$dirty && myform.select.$error.required">This field is
+            required.</span>
+        <span style="color: green" ng-show="myform.select.$dirty && myform.select.$valid">✓</span><br><br>
+
+        <input type="submit"><br><br>
+        <div>
+            Your responses: <br>
+            <br>
+            Register Number:{{regno}}<br>
+            <br>
+            Name:{{name}}<br>
+            <br>
+            KMail:{{mail}}<br>
+            <br>
+            Interested in:{{myAct}}<br>
+            <br><br>
+
+        </div>
+    </form>
+
+</body>
+
+</html>
