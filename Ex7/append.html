@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <h1>Registration Form</h1>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+
+        </script>
+        <style>
+            .ancestors * { 
+              display: block;
+              border: 2px solid rgb(236, 12, 61);
+              color: rgb(232, 11, 240);
+              padding: 5px;
+              margin: 15px;
+            }
+            </style>
+        <script>
+            $(document).ready(function(){
+                $("#add").click(function(){
+                    $('#out').append("Name : " + $('#name').val() + "<br>Reg.No : " + $('#Reg').val() + "<br>");
+                   
+                });
+
+                $("#remove").click(function(){
+                    $("#div").remove()
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        Name :   &nbsp; &nbsp;    <input type="text" id="name"><br><br>
+        Reg.No. : <input type="text" id="Reg"><br><br>
+        
+
+        <div class="ancestors" id="div">
+           
+            <p id="out"> </p>
+        </div>
+
+    <button id="add">Append text</button>
+    <button id="remove">Remove text</button>
+    </body>
+</html>
+
